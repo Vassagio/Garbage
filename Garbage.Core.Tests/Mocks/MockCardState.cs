@@ -16,6 +16,8 @@ namespace Garbage.Core.Tests.Mocks {
 
         public ICardState Lock() => _mock.Object.Lock();
 
+        public ICardState DeepClone() => _mock.Object.DeepClone();
+
         public MockCardState StartReturns(ICardState cardState) {
             _mock.Setup(m => m.Start()).Returns(cardState);
             return this;

@@ -1,15 +1,10 @@
-﻿using System;
-using Garbage.Core.Cards;
+﻿using Garbage.Core.Cards;
 using Garbage.Core.Cards.CardStates;
 using Garbage.Core.Tests.Mocks;
-using StandardStates =  Garbage.Core.Cards.CardStates.StandardCardStates;
-using WildStates = Garbage.Core.Cards.CardStates.WildCardStates;
 using Xunit;
 
-namespace Garbage.Core.Tests.Cards
-{
-    public class CardTest
-    {        
+namespace Garbage.Core.Tests.Cards {
+    public class CardTest {
         [Fact]
         public void Initialize_Card() {
             var card = BuildCard();
@@ -18,8 +13,7 @@ namespace Garbage.Core.Tests.Cards
         }
 
         [Fact]
-        public void Start_CallsStatesStart()
-        {
+        public void Start_CallsStatesStart() {
             var cardState = new MockCardState();
             var card = BuildCard(cardState);
 
@@ -29,8 +23,7 @@ namespace Garbage.Core.Tests.Cards
         }
 
         [Fact]
-        public void Select_CallsStatesSelect()
-        {
+        public void Select_CallsStatesSelect() {
             var cardState = new MockCardState();
             var card = BuildCard(cardState);
 
@@ -40,8 +33,7 @@ namespace Garbage.Core.Tests.Cards
         }
 
         [Fact]
-        public void Play_CallsPlaySelect()
-        {
+        public void Play_CallsPlaySelect() {
             var cardState = new MockCardState();
             var card = BuildCard(cardState);
 
@@ -51,8 +43,7 @@ namespace Garbage.Core.Tests.Cards
         }
 
         [Fact]
-        public void Discard_CallsStatesDiscard()
-        {
+        public void Discard_CallsStatesDiscard() {
             var cardState = new MockCardState();
             var card = BuildCard(cardState);
 
@@ -62,8 +53,7 @@ namespace Garbage.Core.Tests.Cards
         }
 
         [Fact]
-        public void Hide_CallsStatesHide()
-        {
+        public void Hide_CallsStatesHide() {
             var cardState = new MockCardState();
             var card = BuildCard(cardState);
 
@@ -73,8 +63,7 @@ namespace Garbage.Core.Tests.Cards
         }
 
         [Fact]
-        public void Lock_CallsStatesLock()
-        {
+        public void Lock_CallsStatesLock() {
             var cardState = new MockCardState();
             var card = BuildCard(cardState);
 
@@ -83,8 +72,7 @@ namespace Garbage.Core.Tests.Cards
             cardState.VerifyLockCalled();
         }
 
-        private static Card BuildCard(ICardState cardState = null)
-        {
+        private static Card BuildCard(ICardState cardState = null) {
             cardState = cardState ?? new MockCardState();
             return new Card(default(Suit), default(CardValue), cardState);
         }

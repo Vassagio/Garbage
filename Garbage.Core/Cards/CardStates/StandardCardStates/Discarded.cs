@@ -6,5 +6,8 @@
         public ICardState Discard() => this;
         public ICardState Hide() => new Hidden();
         public ICardState Lock() => this;
+        public ICardState DeepClone() => new Discarded();
+
+        public override string ToString() => nameof(Discarded);
     }
 }
