@@ -62,6 +62,10 @@
       <Project>{cea74df2-eae9-4cc3-a6fe-cba108e53523}</Project>
       <Name>Garbage.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Garbage.Utilities\Garbage.Utilities.csproj">
+      <Project>{05dd295b-8f4c-4042-b798-a422753d5f92}</Project>
+      <Name>Garbage.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -40,34 +40,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicRandomizer.cs" />
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\CardBuilders\CardBuilder.cs" />
     <Compile Include="Cards\CardBuilders\ICardBuilder.cs" />
     <Compile Include="Cards\CardBuilders\ICardTypeBuilder.cs" />
     <Compile Include="Cards\CardBuilders\ICardValueBuilder.cs" />
+    <Compile Include="Cards\CardStates\IPlayedCardState.cs" />
+    <Compile Include="Cards\CardTypeStates\ICardTypeState.cs" />
+    <Compile Include="Cards\CardTypeStates\StandardCardType.cs" />
+    <Compile Include="Cards\CardTypeStates\WildCardType.cs" />
     <Compile Include="Cards\CardValue.cs" />
     <Compile Include="Cards\ICard.cs" />
+    <Compile Include="Cards\ICardVisitor.cs" />
     <Compile Include="Decks\Deck.cs" />
     <Compile Include="Cards\CardBuilders\ICardSuitBuilder.cs" />
     <Compile Include="Decks\IDeckFactory.cs" />
-    <Compile Include="IRandomizer.cs" />
     <Compile Include="Decks\IShuffler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Decks\GarbageDeckFactory.cs" />
     <Compile Include="Decks\FisherYatesShuffler.cs" />
-    <Compile Include="Cards\CardStates\WildCardStates\Discarded.cs" />
-    <Compile Include="Cards\CardStates\WildCardStates\Hidden.cs" />
-    <Compile Include="Cards\CardStates\WildCardStates\Started.cs" />
-    <Compile Include="Cards\CardStates\WildCardStates\Played.cs" />
-    <Compile Include="Cards\CardStates\StandardCardStates\Discarded.cs" />
-    <Compile Include="Cards\CardStates\StandardCardStates\Hidden.cs" />
+    <Compile Include="Cards\CardStates\WildCardPlayed.cs" />
+    <Compile Include="Cards\CardStates\Discarded.cs" />
+    <Compile Include="Cards\CardStates\Hidden.cs" />
     <Compile Include="Cards\CardStates\ICardState.cs" />
-    <Compile Include="Cards\CardStates\StandardCardStates\Started.cs" />
-    <Compile Include="Cards\CardStates\StandardCardStates\Locked.cs" />
-    <Compile Include="Cards\CardStates\StandardCardStates\Played.cs" />
-    <Compile Include="Cards\CardStates\StandardCardStates\Selected.cs" />
-    <Compile Include="Cards\CardStates\WildCardStates\Selected.cs" />
+    <Compile Include="Cards\CardStates\Started.cs" />
+    <Compile Include="Cards\CardStates\Locked.cs" />
+    <Compile Include="Cards\CardStates\StandardCardPlayed.cs" />
+    <Compile Include="Cards\CardStates\Selected.cs" />
     <Compile Include="Cards\Suit.cs" />
   </ItemGroup>
   <ItemGroup>

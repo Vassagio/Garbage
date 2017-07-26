@@ -1,12 +1,13 @@
-using Garbage.Core.Cards.CardStates;
-using Garbage.Core.Cards.CardStates.StandardCardStates;
-
 namespace Garbage.Core.Cards.CardBuilders {
-    public class CardBuilder: ICardSuitBuilder, ICardValueBuilder, ICardTypeBuilder, ICardBuilder
+    internal class CardBuilder: ICardSuitBuilder, ICardValueBuilder, ICardTypeBuilder, ICardBuilder
     {
+        private Card _card;
         private Suit _suit;
-        private CardValue _cardValue;
-        private ICardState _state = new Started();        
+        private CardValue _cardValue;              
+
+        public static ICardSuitBuilder NewCard() => new CardBuilder();
+
+        private CardBuilder() {}
 
         public ICardValueBuilder WithSuit(Suit suit) {
             _suit = suit;
@@ -15,14 +16,15 @@ namespace Garbage.Core.Cards.CardBuilders {
 
         public ICardTypeBuilder WithValue(CardValue cardValue) {
             _cardValue = cardValue;
+            _card = Card.Create(_suit, _cardValue);
             return this;
         }
 
         public ICardBuilder IsWild() {
-            _state = new CardStates.WildCardStates.Started();
+            _card.Wild();
             return this;
         }
 
-        public Card Build() => new Card(_suit, _cardValue, _state);
+        public Card Build() => _card;
     }
 }

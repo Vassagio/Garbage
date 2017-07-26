@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Garbage.Core.Cards;
+using Garbage.Utilities.Randomizer;
 
 namespace Garbage.Core.Decks {
     public class FisherYatesShuffler : IShuffler {
