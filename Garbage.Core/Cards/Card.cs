@@ -1,19 +1,24 @@
-﻿using Garbage.Core.Cards.CardBuilders;
-using Garbage.Core.Cards.CardStates;
+﻿using Garbage.Core.Cards.CardStates;
+using Garbage.Core.Cards.CardTypeStates;
 
-namespace Garbage.Core.Cards {
+namespace Garbage.Core.Cards {    
     public class Card : ICard
     {
         public Suit Suit { get; }
         public CardValue Value { get; }
         private ICardState _state;
+        private ICardTypeState _type;
 
-        public static ICardSuitBuilder Initialize() => new CardBuilder();
+        public static Card Create(Suit suit, CardValue cardValue) {
+            var cardType = new StandardCardType();
+            return new Card(suit, cardValue, new Started(cardType), cardType);
+        } 
 
-        internal Card(Suit suit, CardValue cardValue, ICardState state) {
+        internal Card(Suit suit, CardValue cardValue, ICardState state, ICardTypeState cardType) {
             Suit = suit;
             Value = cardValue;
             _state = state;
+            _type = cardType;
         }
 
         public void Start() {
@@ -39,7 +44,11 @@ namespace Garbage.Core.Cards {
         public void Lock() {
             _state = _state.Lock();
         }
+        
+        public void Wild() {
+            _type = _type.Wild();
+        }
 
-        public override string ToString() => $"{Value} of {Suit}s";
+        public override string ToString() => $"{Value} of {Suit}s{_type}";
     }
 }

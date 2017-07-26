@@ -62,16 +62,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cards\CardStates\CardStateHelper\CardStateTests.cs" />
-    <Compile Include="Cards\CardStates\CardStateHelper\ICardStateAnd.cs" />
-    <Compile Include="Cards\CardStates\CardStateHelper\ICardStateTransition.cs" />
-    <Compile Include="Cards\CardStates\CardStateHelper\ICardStateWhen.cs" />
+    <Compile Include="Cards\CardBuilders\CardBuilderTest.cs" />
+    <Compile Include="Cards\StateHelper\State.cs" />
+    <Compile Include="Cards\StateHelper\IStateAnd.cs" />
+    <Compile Include="Cards\StateHelper\IStateTransition.cs" />
+    <Compile Include="Cards\StateHelper\IStateWhen.cs" />
+    <Compile Include="Cards\StateHelper\StateTests.cs" />
     <Compile Include="Cards\CardStates\StandardCardStatesTest.cs" />
     <Compile Include="Cards\CardStates\WildCardStatesTest.cs" />
+    <Compile Include="Cards\CardTypeStates\CardTypeStatesTest.cs" />
     <Compile Include="Decks\FisherYatesShufflerTest.cs" />
     <Compile Include="Decks\GarbageDeckFactoryTest.cs" />
     <Compile Include="Mocks\MockCard.cs" />
     <Compile Include="Mocks\MockCardState.cs" />
+    <Compile Include="Mocks\MockCardTypeState.cs" />
     <Compile Include="Mocks\MockRandomizer.cs" />
     <Compile Include="Mocks\MockShuffler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

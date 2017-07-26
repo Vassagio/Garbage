@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using Garbage.Utilities.Randomizer;
+using Moq;
 
 namespace Garbage.Core.Tests.Mocks {
     public class MockRandomizer : IRandomizer {

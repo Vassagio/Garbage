@@ -3,6 +3,7 @@ using System.Linq;
 using Garbage.Core.Cards;
 using Garbage.Core.Decks;
 using Garbage.Core.Tests.Mocks;
+using Garbage.Utilities.Randomizer;
 using Xunit;
 
 namespace Garbage.Core.Tests.Decks {

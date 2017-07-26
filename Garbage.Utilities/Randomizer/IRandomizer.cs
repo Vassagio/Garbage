@@ -1,4 +1,4 @@
-﻿namespace Garbage.Core
+﻿namespace Garbage.Utilities.Randomizer
 {
     public interface IRandomizer
     {

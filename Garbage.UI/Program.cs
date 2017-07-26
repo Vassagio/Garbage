@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Garbage.Core;
 using Garbage.Core.Decks;
+using Garbage.Utilities.Randomizer;
 
 namespace Garbage.UI {
     internal class Program {

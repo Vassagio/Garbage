@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Garbage.Core.Cards;
+using Garbage.Core.Cards.CardBuilders;
 using Garbage.Utilities;
 
 namespace Garbage.Core.Decks {
@@ -20,20 +21,20 @@ namespace Garbage.Core.Decks {
         }
 
         private static IEnumerable<Card> Create(Suit suit) {
-            var cards = new List<Card> {
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Ace).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Two).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Three).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Four).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Five).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Six).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Seven).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Eight).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Nine).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Ten).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Jack).IsWild().Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.Queen).Build(),
-                Card.Initialize().WithSuit(suit).WithValue(CardValue.King).Build(),                
+            var cards = new List<Card> {                
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Ace).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Two).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Three).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Four).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Five).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Six).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Seven).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Eight).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Nine).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Ten).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Jack).IsWild().Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.Queen).Build(),
+                CardBuilder.NewCard().WithSuit(suit).WithValue(CardValue.King).Build(),                
             };
             return cards;
         }
