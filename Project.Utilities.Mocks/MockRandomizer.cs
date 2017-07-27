@@ -1,7 +1,7 @@
-﻿using Garbage.Utilities.Randomizer;
-using Moq;
+﻿using Moq;
+using Project.Utilities.Randomizer;
 
-namespace Garbage.Core.Tests.Mocks {
+namespace Project.Utilities.Mocks {
     public class MockRandomizer : IRandomizer {
 
         private readonly Mock<IRandomizer> _mock = new Mock<IRandomizer>();

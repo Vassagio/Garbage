@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Garbage.Core.Cards;
 
@@ -18,6 +19,6 @@ namespace Garbage.Core.Decks {
 
         public Deck Shuffle() => new Deck(_shuffler.Shuffle(_cards), _shuffler);
         public int Count => _cards.Count;
-        public ICard this[int index] => _cards[index];
+        public ICard this[int index] => _cards[index];         
     }
 }

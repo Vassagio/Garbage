@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using Garbage.Core.Decks;
-using Garbage.Core.Tests.Mocks;
+using Garbage.Core.Mocks;
 using Xunit;
 
 namespace Garbage.Core.Tests.Decks {

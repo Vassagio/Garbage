@@ -1,7 +1,7 @@
 ﻿using System;
-using Garbage.Utilities;
+using Project.Utilities;
 
-namespace Garbage.Core.Tests.Cards.StateHelper {
+namespace Test.Utilities.StateHelper {
     public interface IStateTransition<T> where T : class, IDeepCloneable<T>
     {
         IStateAnd<T> TransitionTo<TConcreteType>(Func<TConcreteType> create) where TConcreteType : class, T;

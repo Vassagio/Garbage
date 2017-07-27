@@ -7,8 +7,8 @@
     <ProjectGuid>{05DD295B-8F4C-4042-B798-A422753D5F92}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Garbage.Utilities</RootNamespace>
-    <AssemblyName>Garbage.Utilities</AssemblyName>
+    <RootNamespace>Project.Utilities</RootNamespace>
+    <AssemblyName>Project.Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

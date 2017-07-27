@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Garbage.Core.Tests.Cards.StateHelper
+namespace Test.Utilities.StateHelper
 {
     public static class State
     {        

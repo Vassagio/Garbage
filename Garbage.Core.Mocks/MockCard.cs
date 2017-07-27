@@ -1,8 +1,7 @@
-﻿using System;
-using Garbage.Core.Cards;
+﻿using Garbage.Core.Cards;
 using Moq;
 
-namespace Garbage.Core.Tests.Mocks
+namespace Garbage.Core.Mocks
 {
     public class MockCard: ICard
     {
@@ -15,5 +14,16 @@ namespace Garbage.Core.Tests.Mocks
         public void Lock() => _mock.Object.Lock();
         public void Play() => _mock.Object.Play();
         public void Select() => _mock.Object.Select();
+
+        public MockCard SuitReturns(Suit suit) {
+            _mock.SetupGet(m => m.Suit).Returns(suit);
+            return this;
+        }
+
+        public MockCard ValueReturns(CardValue cardValue)
+        {
+            _mock.SetupGet(m => m.Value).Returns(cardValue);
+            return this;
+        }
     }
 }
