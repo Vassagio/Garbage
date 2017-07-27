@@ -1,7 +1,7 @@
 ﻿using System;
 using Garbage.Core.Cards.CardStates;
 using Garbage.Core.Cards.CardTypeStates;
-using Garbage.Core.Tests.Cards.StateHelper;
+using Test.Utilities.StateHelper;
 using Xunit;
 
 namespace Garbage.Core.Tests.Cards.CardStates {

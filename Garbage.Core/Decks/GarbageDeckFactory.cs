@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Garbage.Core.Cards;
 using Garbage.Core.Cards.CardBuilders;
-using Garbage.Utilities;
+using Project.Utilities;
 
 namespace Garbage.Core.Decks {
     public class GarbageDeckFactory : IDeckFactory

@@ -32,12 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cards\Card.cs" />
@@ -70,9 +64,9 @@
     <Compile Include="Cards\Suit.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Garbage.Utilities\Garbage.Utilities.csproj">
+    <ProjectReference Include="..\Garbage.Utilities\Project.Utilities.csproj">
       <Project>{05dd295b-8f4c-4042-b798-a422753d5f92}</Project>
-      <Name>Garbage.Utilities</Name>
+      <Name>Project.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

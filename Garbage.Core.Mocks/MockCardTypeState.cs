@@ -2,7 +2,7 @@
 using Garbage.Core.Cards.CardTypeStates;
 using Moq;
 
-namespace Garbage.Core.Tests.Mocks {
+namespace Garbage.Core.Mocks {
     public class MockCardTypeState : ICardTypeState {
         public IPlayedCardState PlayedCardState => _mock.Object.PlayedCardState;
         private readonly Mock<ICardTypeState> _mock = new Mock<ICardTypeState>();

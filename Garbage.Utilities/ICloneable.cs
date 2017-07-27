@@ -1,4 +1,4 @@
-﻿namespace Garbage.Utilities
+﻿namespace Project.Utilities
 {
     public interface IDeepCloneable<out T> where T: class
     {

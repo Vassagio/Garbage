@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using Garbage.Utilities;
+using Project.Utilities;
 
-namespace Garbage.Core.Tests.Cards.StateHelper {
+namespace Test.Utilities.StateHelper {
     public class StateTests<T> : IStateWhen<T>, IStateTransition<T>, IStateAnd<T> where T: class, IDeepCloneable<T>
     {
         internal struct TestCase

@@ -1,7 +1,7 @@
 ﻿using Garbage.Core.Cards;
 using Garbage.Core.Cards.CardStates;
 using Garbage.Core.Cards.CardTypeStates;
-using Garbage.Core.Tests.Mocks;
+using Garbage.Core.Mocks;
 using Xunit;
 
 namespace Garbage.Core.Tests.Cards

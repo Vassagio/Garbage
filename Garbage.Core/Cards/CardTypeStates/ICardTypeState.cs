@@ -1,5 +1,5 @@
 ﻿using Garbage.Core.Cards.CardStates;
-using Garbage.Utilities;
+using Project.Utilities;
 
 namespace Garbage.Core.Cards.CardTypeStates
 {

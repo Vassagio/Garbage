@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{18D5E53A-B35D-4DAD-B02A-E08FB5192BD4}</ProjectGuid>
+    <ProjectGuid>{6D748C2E-7BA5-423E-BCBB-DE06769AC0A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Garbage.Core.Tests</RootNamespace>
-    <AssemblyName>Garbage.Core.Tests</AssemblyName>
+    <RootNamespace>Test.Utilities</RootNamespace>
+    <AssemblyName>Test.Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -49,46 +49,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cards\CardBuilders\CardBuilderTest.cs" />
-    <Compile Include="Cards\CardStates\StandardCardStatesTest.cs" />
-    <Compile Include="Cards\CardStates\WildCardStatesTest.cs" />
-    <Compile Include="Cards\CardTypeStates\CardTypeStatesTest.cs" />
-    <Compile Include="Decks\DeckTest.cs" />
-    <Compile Include="Decks\FisherYatesShufflerTest.cs" />
-    <Compile Include="Decks\GarbageDeckFactoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Cards\CardTest.cs" />
+    <Compile Include="StateHelper\IStateAnd.cs" />
+    <Compile Include="StateHelper\IStateTransition.cs" />
+    <Compile Include="StateHelper\IStateWhen.cs" />
+    <Compile Include="StateHelper\State.cs" />
+    <Compile Include="StateHelper\StateTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Garbage.Utilities\Project.Utilities.csproj">
+      <Project>{05dd295b-8f4c-4042-b798-a422753d5f92}</Project>
+      <Name>Project.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.3.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Garbage.Core.Mocks\Garbage.Core.Mocks.csproj">
-      <Project>{9E78B7D2-2C7F-40E0-9857-468FC12D9C94}</Project>
-      <Name>Garbage.Core.Mocks</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Garbage.Core\Garbage.Core.csproj">
-      <Project>{CEA74DF2-EAE9-4CC3-A6FE-CBA108E53523}</Project>
-      <Name>Garbage.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Garbage.Utilities\Project.Utilities.csproj">
-      <Project>{05DD295B-8F4C-4042-B798-A422753D5F92}</Project>
-      <Name>Project.Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Project.Utilities.Mocks\Project.Utilities.Mocks.csproj">
-      <Project>{BCE62946-E2E4-4A78-BA37-C486176C29B2}</Project>
-      <Name>Project.Utilities.Mocks</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Test.Utilities\Test.Utilities.csproj">
-      <Project>{6D748C2E-7BA5-423E-BCBB-DE06769AC0A7}</Project>
-      <Name>Test.Utilities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

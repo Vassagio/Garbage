@@ -1,4 +1,4 @@
-﻿using Garbage.Utilities;
+﻿using Project.Utilities;
 
 namespace Garbage.Core.Cards.CardStates {
     public interface ICardState: IDeepCloneable<ICardState> { 
