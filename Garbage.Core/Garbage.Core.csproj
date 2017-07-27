@@ -32,6 +32,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0-preview2-25405-01\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cards\Card.cs" />
@@ -46,8 +49,14 @@
     <Compile Include="Cards\CardValue.cs" />
     <Compile Include="Cards\ICard.cs" />
     <Compile Include="Cards\ICardVisitor.cs" />
+    <Compile Include="Decks\Dealers\Dealer.cs" />
+    <Compile Include="Decks\Dealers\Hand.cs" />
+    <Compile Include="Decks\Dealers\IDealerDeal.cs" />
+    <Compile Include="Decks\Dealers\IDealerHands.cs" />
+    <Compile Include="Decks\Dealers\IDealerPlayers.cs" />
     <Compile Include="Decks\Deck.cs" />
     <Compile Include="Cards\CardBuilders\ICardSuitBuilder.cs" />
+    <Compile Include="Decks\IDeck.cs" />
     <Compile Include="Decks\IDeckFactory.cs" />
     <Compile Include="Decks\IShuffler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +77,9 @@
       <Project>{05dd295b-8f4c-4042-b798-a422753d5f92}</Project>
       <Name>Project.Utilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

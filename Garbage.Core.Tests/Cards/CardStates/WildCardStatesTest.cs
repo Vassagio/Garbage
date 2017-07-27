@@ -49,7 +49,7 @@ namespace Garbage.Core.Tests.Cards.CardStates
         [Fact]
         public void Hidden_ChangeStates()
         {
-            var state = State.Create<Hidden, WildCardType>();
+            var state = HIDDEN();
 
             StateTests<ICardState>
                 .For(state)
@@ -65,7 +65,7 @@ namespace Garbage.Core.Tests.Cards.CardStates
         [Fact]
         public void Played_ChangeStates()
         {
-            var state = State.Create<WildCardPlayed, WildCardType>();
+            var state = PLAYED();
 
             StateTests<ICardState>
                 .For(state)
@@ -81,7 +81,7 @@ namespace Garbage.Core.Tests.Cards.CardStates
         [Fact]
         public void Discarded_ChangeStates()
         {
-            var state = State.Create<Discarded, WildCardType>();
+            var state = DISCARDED();
 
             StateTests<ICardState>
                 .For(state)

@@ -31,7 +31,7 @@ namespace Garbage.Core.Tests.Cards.CardStates {
         [Fact]
         public void Selected_ChangeStates()
         {
-            var state = State.Create<Selected, StandardCardType>();
+            var state = SELECTED();
 
             StateTests<ICardState>
                 .For(state)
@@ -47,7 +47,7 @@ namespace Garbage.Core.Tests.Cards.CardStates {
         [Fact]
         public void Hidden_ChangeStates()
         {
-            var state = State.Create<Hidden, StandardCardType>();
+            var state = HIDDEN();
 
             StateTests<ICardState>
                 .For(state)
@@ -63,7 +63,7 @@ namespace Garbage.Core.Tests.Cards.CardStates {
         [Fact]
         public void Played_ChangeStates()
         {
-            var state = State.Create<StandardCardPlayed, StandardCardType>();
+            var state = PLAYED();
 
             StateTests<ICardState>
                 .For(state)
@@ -79,7 +79,7 @@ namespace Garbage.Core.Tests.Cards.CardStates {
         [Fact]
         public void Discarded_ChangeStates()
         {
-            var state = State.Create<Discarded, StandardCardType>();
+            var state = DISCARDED();
 
             StateTests<ICardState>
                 .For(state)
@@ -95,7 +95,7 @@ namespace Garbage.Core.Tests.Cards.CardStates {
         [Fact]
         public void Locked_ChangeStates()
         {
-            var state = State.Create<Locked, StandardCardType>();
+            var state = LOCKED();
 
             StateTests<ICardState>
                 .For(state)

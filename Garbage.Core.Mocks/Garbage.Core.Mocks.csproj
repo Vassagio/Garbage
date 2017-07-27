@@ -43,6 +43,7 @@
     <Compile Include="MockCard.cs" />
     <Compile Include="MockCardState.cs" />
     <Compile Include="MockCardTypeState.cs" />
+    <Compile Include="MockDeck.cs" />
     <Compile Include="MockShuffler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

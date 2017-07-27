@@ -10,6 +10,7 @@ namespace Garbage.UI {
 
         public void Run() {
             var deck = _deckFactory.Create().Shuffle();
+            //var hands = deck.Deal().NumberOfPlayers(4).NumberOfCards(10);
             Console.WriteLine(deck);
             Console.ReadKey();
         }
